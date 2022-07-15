@@ -15,6 +15,7 @@ class Person():
         """Просим человека станцевать"""
         print(self.name + " танцует")
 
+
 man = Person("Андрей", 16)
 woman = Person("Настя", 30)
 
