@@ -105,6 +105,29 @@ class Test_new_location():
         print("Адрес верен")
 
 
+        """Удаление новой локации"""
+
+        delete_resource = "/maps/api/place/delete/json"
+        delete_url = base_url + delete_resource + key
+        print(delete_url)
+        json_for_delete_new_location = {
+            "place_id": place_id
+        }
+        result_delete = requests.delete(delete_url, json = json_for_delete_new_location)
+        print(result_delete.text)
+        print("Статус код: " + str(result_delete.status_code))
+        assert 200 == result_delete.status_code
+        if result_delete.status_code == 200:
+            print("Успешно! Удаление новой локации прошло успешно")
+        else:
+            print("Провал!")
+        check_status = result_delete.json()
+        check_status_info = check_status.get("status")
+        print("Сообщение: " + check_status_info)
+        assert check_status_info == "OK"
+        print("Сообщение верно")
+
+
 
 
 new_place = Test_new_location()
