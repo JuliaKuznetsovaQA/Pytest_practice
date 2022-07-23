@@ -127,6 +127,24 @@ class Test_new_location():
         assert check_status_info == "OK"
         print("Сообщение верно")
 
+        """Проверка удаления локации"""
+
+        result_get = requests.get(get_url)
+        print(result_get.text)
+        print("Статус код: " + str(result_get.status_code))
+        assert 404 == result_get.status_code
+        if result_get.status_code == 404:
+            print("Успешно! Проверка удаления локации прошла успешно")
+        else:
+            print("Провал!")
+        check_msg = result_get.json()
+        check_msg_info = check_msg.get("msg")
+        print("Сообщение: " + check_msg_info)
+        assert check_msg_info == "Get operation failed, looks like place_id  doesn't exists"
+        print("Сообщение верно")
+
+        print('Тестирование Test_new_location завершено успешно.')
+
 
 
 
