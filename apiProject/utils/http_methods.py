@@ -3,7 +3,7 @@ import requests
 """Список HTTP методов"""
 
 class Http_methods:
-    headers = {'Content-Type' : 'application/json'}
+    headers = {'Content-Type': 'application/json'}
     cookie = ""
 
     @staticmethod
