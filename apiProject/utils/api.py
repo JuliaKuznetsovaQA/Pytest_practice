@@ -8,6 +8,7 @@ key = "?key=qaclick123"                             # Параметр для в
 class Google_maps_api():
 
     """Метод для создания новой локации"""
+
     @staticmethod
     def create_new_place():
 
