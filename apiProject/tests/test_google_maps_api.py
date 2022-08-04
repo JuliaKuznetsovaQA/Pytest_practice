@@ -2,7 +2,7 @@ from requests import Response
 
 from utils.api import Google_maps_api
 
-"""Создание, изменение и удаление новой локации"""
+"""Создание, изменение и удаление новой локации."""
 
 class Test_create_place():
 
@@ -27,3 +27,4 @@ class Test_create_place():
 
         print("Метод GET DELETE")
         result_get: Response = Google_maps_api.get_new_place(place_id)
+    
