@@ -1,6 +1,6 @@
 import requests
 
-"""Список HTTP методов"""
+"""Список HTTP методов."""
 
 class Http_methods:
     headers = {'Content-Type': 'application/json'}
@@ -28,3 +28,4 @@ class Http_methods:
     def delete(url, body):
         result = requests.delete(url, json=body, headers=Http_methods.headers, cookies=Http_methods.cookie)
         return result
+    
