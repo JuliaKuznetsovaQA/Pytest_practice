@@ -7,7 +7,7 @@ key = "?key=qaclick123"                             # Параметр для в
 
 class Google_maps_api():
 
-    """Метод для создания новой локации"""
+    """Метод для создания новой локации."""
 
     @staticmethod
     def create_new_place():
@@ -37,7 +37,7 @@ class Google_maps_api():
         return result_post
 
 
-    """Метод для проверки новой локации"""
+    """Метод для проверки новой локации."""
 
     @staticmethod
     def get_new_place(place_id):
@@ -49,7 +49,7 @@ class Google_maps_api():
         print(result_get.text)
         return result_get
 
-    """Метод для изменения новой локации"""
+    """Метод для изменения новой локации."""
 
     @staticmethod
     def put_new_place(place_id):
@@ -66,7 +66,7 @@ class Google_maps_api():
         print(result_put.text)
         return result_put
 
-    """Метод для удаления новой локации"""
+    """Метод для удаления новой локации."""
 
     @staticmethod
     def delete_new_place(place_id):
