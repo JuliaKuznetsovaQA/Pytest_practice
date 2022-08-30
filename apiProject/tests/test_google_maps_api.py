@@ -16,8 +16,6 @@ class Test_create_place():
         place_id = check_post.get("place_id")
         Checking.check_status_code(result_post, 200)
         Checking.check_json_token(result_post, list(json.loads(result_post.text)))
-        # token = json.loads(result_post.text)
-        # print(list(token))
 
         print("Метод GET POST")
         result_get: Response = Google_maps_api.get_new_place(place_id)
